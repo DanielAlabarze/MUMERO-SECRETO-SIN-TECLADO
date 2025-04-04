@@ -1,19 +1,14 @@
 // Inicializo la librería JSConfetti para efectos de confeti
 const jsConfetti = new JSConfetti();
 
-
-
 // Obtengo los elementos HTML
 const inputEntrada = document.querySelector(".entrada");
 const Salida = document.querySelector(".salida");
-const GanastePerdiste = document.querySelector(".ganaste");
 const IntentosRestantes = document.querySelector(".intentos");
-const salidaGanadorPerdedor = document.querySelector(".salidaGanadorPerdedor");
 const juegosGanadosElement = document.getElementById("juegosGanados");
 const juegosPerdidosElement = document.getElementById("juegosPerdidos");
 const botonReinicio = document.getElementById("botonReinicio");
 const botonesNumeros = document.querySelectorAll(".numero");
-
 
 inputEntrada.textContent = 0;
 botonesNumeros.forEach((boton) => {
@@ -26,8 +21,6 @@ botonesNumeros.forEach((boton) => {
     adivinarNumeroSecreto();
   });
 });
-
-
 
 // Establezco el mensaje inicial de intentos restantes
 IntentosRestantes.innerHTML = "Tenes 10 intentos";
@@ -86,8 +79,7 @@ function adivinarNumeroSecreto() {
 
   // Valido la entrada del usuario
   if (Entrada === "" || Entrada < 1 || Entrada > 10) {
-    Salida.innerHTML =
-      "Por favor, elegí un número entre 1 y 10";
+    Salida.innerHTML = "Por favor, elegí un número entre 1 y 10";
     return;
   }
 
@@ -110,8 +102,6 @@ function adivinarNumeroSecreto() {
     jsConfetti.addConfetti();
 
     // Muestro mensajes de victoria
-    // GanastePerdiste.innerHTML = "¡Ganaste 🎉!";
-    // salidaGanadorPerdedor.innerHTML = fraseAleatoriaGanador;
 
     Swal.fire({
       icon: "success",
@@ -155,8 +145,6 @@ function adivinarNumeroSecreto() {
     if (intentos < 10) {
       // Muestro mensaje de intento fallido
       Salida.innerHTML = `Elegiste ${Entrada} y el número secreto era ${numeroSecreto}. Intenta nuevamente`;
-      GanastePerdiste.innerHTML = "";
-      salidaGanadorPerdedor.innerHTML = "";
 
       // Muestro los intentos restantes
       IntentosRestantes.innerHTML =
@@ -167,9 +155,6 @@ function adivinarNumeroSecreto() {
       // Si el usuario agota los intentos
       Salida.innerHTML = `Lo siento, elegiste ${Entrada} y el número secreto era ${numeroSecreto}`;
       IntentosRestantes.innerHTML = `¡Agotaste los 10 intentos!`;
-      // GanastePerdiste.innerHTML = "¡Perdiste 😪!";
-
-      // salidaGanadorPerdedor.innerHTML = fraseAleatoriaPerdedor;
 
       Swal.fire({
         icon: "error",
@@ -203,10 +188,7 @@ function reiniciarContadores() {
   juegosPerdidos = 0;
   inputEntrada.value = 0;
   IntentosRestantes.innerHTML = "Tenes 10 intentos";
-  Salida.innerHTML =
-    "Por favor, elegí un número entre 1 y 10, luego presiona Enter";
-  // salidaGanadorPerdedor.innerHTML = "";
-  // GanastePerdiste.innerHTML = "";
+  Salida.innerHTML = "Por favor, elegí un número entre 1 y 10";
 
   actualizarContadores();
 }
@@ -226,24 +208,3 @@ botonReinicio.addEventListener("click", reiniciarContadores);
 // Inicialización: actualiza los contadores y ejecuta el primer juego
 actualizarContadores();
 adivinarNumeroSecreto();
-
-{
-  /* <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> */
-}
-// import Swal from "sweetalert2";
-
-// Swal.fire({
-//   icon: "success",
-//   title: "Cotización realizada con éxito.",
-//   showConfirmButton: false,
-//   timer: 2000,
-//   width: "500px",
-// });
-
-// Swal.fire({
-//   icon: "error",
-//   title: "Debes completar todos los datos en pantalla.",
-//   showConfirmButton: false,
-//   timer: 2000,
-//   width: "500px",
-// });

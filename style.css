@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  color: rgb(163, 156, 156);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+.containerTitulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 33%;
+  color: rgb(13, 240, 13);
+  /* border: solid 1px red; */
+}
+
+.divSalida {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 33%;
+  /* border: solid 1px red;  */
+}
+.divEntrada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 34%;
+  /* border: solid 1px red; */
+}
+
+.contadoresEntrada {
+  display: flex;
+  /* border: solid 1px rgb(11, 125, 218); */
+  width: 100%;
+
+  justify-content: space-around;
+  align-items: center;
+}
+.containerContador {
+  border: solid 2px rgb(13, 240, 13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.7rem;
+}
+
+.containerGanadosPerdidos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid 1px red;  */
+  width: 7.9rem;
+  height: 6rem;
+}
+
+#botonReinicio {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 1rem;
+  background-color: red;
+  color: white;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.entrada {
+  width: 7rem;
+  height: 7rem;
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 50%;
+  background-color: black;
+  color: rgb(13, 240, 13);
+  border: solid 2px red; 
+}
+
+.numero {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin-inline: 0.5rem;
+  cursor: pointer;
+  background-color: black;
+  color: rgb(163, 156, 156);
+  border: solid 2px rgb(13, 240, 13);
+  &:hover {
+    background-color: rgb(13, 240, 13);
+    color: black;
+    border: solid 2px rgb(163, 156, 156);
+  }
+}
+
+.ganaste {
+  font-size: 2.5rem;
+  color: rgb(13, 240, 13);
+}
+
+.salidaGanadorPerdedor {
+  font-size: 2.5rem;
+}
+
+.mi-confetti{
+  z-index: 10;
+}
+
+
+/*customClass para swal.fire----------------*/
+
+.mi-titulo {
+  color: rgb(163, 156, 156);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.mi-popup {
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px white !important;
+  width: 50vw;
+  height: 50vh;
+}
+
+.mi-html-container {
+  font-size: 1.2rem;
+}
+
+/* .mi-icono {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: black;
+  color: rgb(75, 22, 221);
+} */
+
+.swal2-icon.mi-icono.swal2-success .swal2-success-ring {
+  border-color: rgb(13, 240, 13); /* Cambia el color del anillo */
+}
+
+.swal2-icon.mi-icono.swal2-error .swal2-error-ring {
+  border-color: rgb(50, 9, 233); /* Cambia el color del anillo */
+}
+
+.swal2-icon.mi-icono.swal2-error .swal2-error-line {
+  background-color: red; /* Cambia el color de la línea */
+}
+
+/*------------------------------------------------*/
+
+@media (min-width: 501px) and (max-width: 950px) {
+  body {
+    justify-content: flex-start;
+
+    padding-block: 1rem;
+  }
+
+  .containerTitulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 20%;
+    color: rgb(13, 240, 13);
+    padding-bottom: 0.3rem;
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+  .ganaste {
+    font-size: 2rem;
+  }
+
+  .salidaGanadorPerdedor {
+    font-size: 1.2rem;
+  }
+  .salida {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    /* border: solid 1px red; */
+  }
+  .divSalida {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+    height: 30%;
+  }
+  .divEntrada {
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+  }
+
+  .entrada {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .mi-titulo {
+    color: rgb(163, 156, 156);
+    font-size: 1.2rem;
+    font-weight:lighter;
+  }
+
+  .mi-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px white !important;
+    width: 60vw;
+    height: 65vh;
+  }
+
+  
+  .botonesNumeros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    margin-top: 1rem;
+    /* border: solid 1px red; */
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .numero {
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+
+    cursor: pointer;
+    background-color: black;
+    color: rgb(163, 156, 156);
+    border: solid 2px rgb(13, 240, 13);
+    &:hover {
+      background-color: rgb(13, 240, 13);
+      color: black;
+      border: solid 2px rgb(163, 156, 156);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    justify-content: center;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+  }
+
+  .containerTitulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 33%;
+    color: rgb(13, 240, 13);
+    padding-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .titulo {
+    font-size: 1.3rem;
+  }
+  .intentos {
+    font-size: 1rem;
+  }
+
+  .ganaste {
+    font-size: 2rem;
+  }
+
+  .salidaGanadorPerdedor {
+    font-size: 1.2rem;
+  }
+
+  .containerGanadosPerdidos {
+    width: 5.5rem;
+  }
+
+  .salida {
+    font-size: 1rem;
+    margin-top: 2rem;
+    /* border: solid 1px red; */
+  }
+  .divSalida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 33%;
+  }
+  .divEntrada {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 34%;
+  }
+
+  .entrada {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .mi-titulo {
+    color: rgb(163, 156, 156);
+    font-size: 1.2rem;
+    font-weight:lighter;
+  }
+
+  .mi-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px white !important;
+    width: 60vw;
+    height: 45vh;
+  }
+
+  .botonesNumeros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    margin-top: 1rem;
+    /* border: solid 1px red; */
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .numero {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+
+    cursor: pointer;
+    background-color: black;
+    color: rgb(163, 156, 156);
+    border: solid 2px rgb(13, 240, 13);
+    &:hover {
+      background-color: rgb(13, 240, 13);
+      color: black;
+      border: solid 2px rgb(163, 156, 156);
+    }
+  }
+}

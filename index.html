@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Daniel Alabarze" />
+    <meta name="description" content="Numero Secreto" />
+    <meta
+      name="keywords"
+      content="Alabarze Daniel, Número Secreto; front end developer, desarrollo web, HTML, CSS, JavaScript, React"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Numero Secreto" />
+    <link
+      rel="shortcut icon"
+      sizes="16x16 24x24 32x32 48x48"
+      href="./img/logoPregunta.jpg"
+    />
+
+    <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Numero Secreto</title>
+  </head>
+  <body class="body">
+    <div class="containerTitulo">
+      <h1 class="titulo">Adiviná el Número Secreto</h1>
+
+      <h2 class="intentos"></h2>
+    </div>
+
+    <div class="divEntrada">
+      <div class="contadoresEntrada">
+        <div class="containerGanadosPerdidos">
+          <p>Juegos Ganados</p>
+          <div class="containerContador">
+            <div id="juegosGanados">0</div>
+          </div>
+        </div>
+
+        <input type="text" class="entrada" value="0" min="1" max="10" disabled />
+
+        <div class="containerGanadosPerdidos">
+          <p>Juegos Perdidos</p>
+          <div class="containerContador">
+            <div id="juegosPerdidos"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button id="botonReinicio">RESET</button>
+      </div>
+    </div>
+
+    <div class="divSalida">
+      <div class="botonesNumeros">
+      <button class="numero">1</button>
+      <button class="numero">2</button>
+      <button class="numero">3</button>
+      <button class="numero">4</button>
+      <button class="numero">5</button>
+      <button class="numero">6</button>
+      <button class="numero">7</button>
+      <button class="numero">8</button>
+      <button class="numero">9</button>
+      <button class="numero">10</button>
+      </div>
+      <h2 class="salida"></h2>
+
+      <h1 class="ganaste"></h1>
+      <h1 class="salidaGanadorPerdedor"></h1>
+    </div>
+
+    <script src="numeroSecreto.js"></script>
+  </body>
+</html>

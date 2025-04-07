@@ -134,6 +134,12 @@ function adivinarNumeroSecreto() {
       jsConfetti.addConfetti();
     }, 300);
 
+    setTimeout(() => {
+      jsConfetti.addConfetti();
+    }, 1000);
+
+
+
     // Reinicio el contador de intentos y limpia el campo de entrada
     intentos = 0;
     inputEntrada.value = "";

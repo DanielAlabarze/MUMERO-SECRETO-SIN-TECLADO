@@ -141,11 +141,13 @@ body {
 
 /*customClass para swal.fire----------------*/
 
+
 .mi-titulo {
-  color: rgb(163, 156, 156);
+  color: rgb(13, 240, 13);
   font-size: 2rem;
   font-weight: bold;
 }
+
 
 .mi-popup {
   background-color: black;
@@ -353,8 +355,9 @@ body {
     height: 6rem;
   }
 
+
   .mi-titulo {
-    color: rgb(163, 156, 156);
+    color: rgb(13, 240, 13);
     font-size: 1.2rem;
     font-weight: lighter;
   }

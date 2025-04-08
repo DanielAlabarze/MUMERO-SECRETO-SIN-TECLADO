@@ -195,7 +195,7 @@ function reiniciarContadores() {
   inputEntrada.value = 0;
   IntentosRestantes.innerHTML = "Tenes 10 intentos";
   Salida.innerHTML = "Por favor, elegí un número entre 1 y 10";
-
+  intentos = 0;
   actualizarContadores();
 }
 

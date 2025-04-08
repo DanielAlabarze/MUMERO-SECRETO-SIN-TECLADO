@@ -10,6 +10,11 @@ const juegosPerdidosElement = document.getElementById("juegosPerdidos");
 const botonReinicio = document.getElementById("botonReinicio");
 const botonesNumeros = document.querySelectorAll(".numero");
 
+const containerNumeroSecreto = document.querySelector(
+  ".containerNumeroSecreto"
+);
+const imagenNumeroSecreto = document.querySelector(".imagenNumeroSecreto");
+
 inputEntrada.textContent = 0;
 botonesNumeros.forEach((boton) => {
   boton.addEventListener("click", () => {
@@ -90,6 +95,8 @@ function adivinarNumeroSecreto() {
   let numeroSecreto = Math.floor(Math.random() * 10) + 1;
   let numeroIngresado = Entrada;
 
+  containerNumeroSecreto.innerHTML = numeroSecreto;
+
   // Selecciono frases aleatorias para ganar o perder
   const fraseAleatoriaGanador =
     frasesGanadoras[Math.floor(Math.random() * frasesGanadoras.length)];
@@ -137,8 +144,6 @@ function adivinarNumeroSecreto() {
     setTimeout(() => {
       jsConfetti.addConfetti();
     }, 1000);
-
-
 
     // Reinicio el contador de intentos y limpia el campo de entrada
     intentos = 0;
@@ -196,6 +201,10 @@ function reiniciarContadores() {
   IntentosRestantes.innerHTML = "Tenes 10 intentos";
   Salida.innerHTML = "Por favor, elegí un número entre 1 y 10";
   intentos = 0;
+
+  containerNumeroSecreto.innerHTML =
+    '<img src="./img/logoPregunta.jpg" alt="Imagen Numero secreto" class="imgDivNumeroSecreto">';
+
   actualizarContadores();
 }
 

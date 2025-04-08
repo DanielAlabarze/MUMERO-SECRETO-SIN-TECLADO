@@ -1,112 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Daniel Alabarze" />
-  <meta name="description" content="Numero Secreto" />
-  <meta name="keywords" content="Alabarze Daniel, Número Secreto; front end developer, desarrollo web, HTML, CSS, JavaScript, React" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Numero Secreto" />
-  <meta property="og:type" content="website" />
-  <meta property="og:description" content="Adiviná el Número Secreto" />
-  <meta property="og:image" content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/img/logoPregunta.jpg" />
-  <meta property="og:url" content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/" />
-  <title>Numero Secreto</title>
-  <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48" href="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/img/logoPregunta.jpg" />
-  <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <meta http-equiv="content-language" content="es">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Numero Secreto">
-  <meta name="twitter:description" content="Adiviná el Número Secreto">
-  <meta name="twitter:image" content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/img/logoPregunta.jpg">
-  <meta name="twitter:url" content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/">
-  <link rel="canonical" href="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/">
-</head>
-
-
-
-
-
-
-
-
-  <!-- <head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Daniel Alabarze" />
     <meta name="description" content="Numero Secreto" />
-
     <meta
       name="keywords"
       content="Alabarze Daniel, Número Secreto; front end developer, desarrollo web, HTML, CSS, JavaScript, React"
     />
     <meta name="robots" content="index, follow" />
     <meta property="og:title" content="Numero Secreto" />
-
     <meta property="og:type" content="website" />
-
     <meta property="og:description" content="Adiviná el Número Secreto" />
-    <meta property="og:image" content="./img/logoPregunta.jpg" />
+    <meta
+      property="og:image"
+      content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/img/logoPregunta.jpg"
+    />
     <meta
       property="og:url"
-      content=" https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/"
+      content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/"
     />
     <title>Numero Secreto</title>
     <link
       rel="shortcut icon"
       sizes="16x16 24x24 32x32 48x48"
-      href="./img/logoPregunta.jpg"
+      href="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/img/logoPregunta.jpg"
     />
-
     <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
-
     <link rel="stylesheet" href="style.css" />
-  </head> -->
+    <meta http-equiv="content-language" content="es" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Numero Secreto" />
+    <meta name="twitter:description" content="Adiviná el Número Secreto" />
+    <meta
+      name="twitter:image"
+      content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/img/logoPregunta.jpg"
+    />
+    <meta
+      name="twitter:url"
+      content="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/"
+    />
+    <link
+      rel="canonical"
+      href="https://danielalabarze.github.io/MUMERO-SECRETO-SIN-TECLADO/"
+    />
+  </head>
 
-
-
-  
   <body class="body">
     <div class="containerTitulo">
       <h1 class="titulo">Adiviná el Número Secreto</h1>
-
       <h2 class="intentos"></h2>
     </div>
 
     <div class="divEntrada">
       <div class="contadoresEntrada">
-        <div class="containerGanadosPerdidos">
+        <div class="containerGanados">
           <p>Juegos Ganados</p>
           <div class="containerContador">
             <div id="juegosGanados">0</div>
           </div>
         </div>
-        <div class="containerInput">
-          <input
-            type="text"
-            class="entrada"
-            value="0"
-            min="1"
-            max="10"
-            disabled
-          />
+
+        <div class="containerInputNumero">
+          <div class="containerInput">
+            <input
+              type="text"
+              class="entrada"
+              value="0"
+              min="1"
+              max="10"
+              disabled
+            />
+          </div>
+
+          <div class="containerNumeroSecreto">
+            <img
+              class="imagenNumeroSecreto"
+              src="./img/logoPregunta.jpg"
+              alt="imagen numero Secreto"
+            />
+          </div>
         </div>
-        <div class="containerGanadosPerdidos">
+
+        <div class="containerPerdidos">
           <p>Juegos Perdidos</p>
           <div class="containerContador">
             <div id="juegosPerdidos"></div>
           </div>
         </div>
       </div>
-      <div>
-        <button id="botonReinicio">RESET</button>
-      </div>
+    </div>
+
+    <div class="containerBotonReinicio">
+      <button id="botonReinicio">RESET</button>
     </div>
 
     <div class="divSalida">

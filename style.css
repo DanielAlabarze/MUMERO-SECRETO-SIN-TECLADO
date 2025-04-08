@@ -22,35 +22,26 @@ body {
   flex-direction: column;
   justify-content: space-around;
   width: 100%;
-  height: 33%;
+  height: 15%;
   color: rgb(13, 240, 13);
   /* border: solid 1px red; */
 }
 
-.divSalida {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 33%;
-  /* border: solid 1px red;  */
-}
 .divEntrada {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 34%;
+  height: 50%;
   /* border: solid 1px red; */
 }
 
 .contadoresEntrada {
   display: flex;
-  /* border: solid 1px rgb(11, 125, 218); */
+  /* border: solid 5px rgb(11, 125, 218); */
   width: 100%;
-
+  height: 90%;
   justify-content: space-around;
   align-items: center;
 }
@@ -65,14 +56,44 @@ body {
   font-size: 1.7rem;
 }
 
-.containerGanadosPerdidos {
+.containerGanados {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* border: solid 1px red;  */
+  /* border: solid 1px red; */
   width: 7.9rem;
   height: 6rem;
+}
+
+.containerPerdidos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* border: solid 1px red; */
+  width: 7.9rem;
+  height: 6rem;
+}
+
+.divSalida {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 33%;
+  /* border: solid 1px red; */
+}
+
+.containerBotonReinicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  /* border: solid 1px red; */
+  margin-bottom: 0;
 }
 
 #botonReinicio {
@@ -80,11 +101,35 @@ body {
   height: 2.5rem;
   border-radius: 50%;
   cursor: pointer;
-  margin: 1rem;
+  margin-block: 4rem;
   background-color: red;
   color: white;
   font-size: 0.5rem;
   font-weight: bold;
+}
+
+.containerInputNumero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* border: solid 1px red; */
+  margin-inline: 3rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  position: relative;
+}
+
+.imagenNumeroSecreto {
+  width: 3rem;
+  height: auto;
+}
+
+.imgDivNumeroSecreto {
+  width: 3rem;
+  height: auto;
 }
 
 .containerInput {
@@ -107,6 +152,21 @@ body {
   background-color: black;
   color: rgb(13, 240, 13);
   border: solid 2px red;
+}
+
+.containerNumeroSecreto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: solid 4px rgb(13, 240, 13);
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: black;
+  position: absolute;
+  bottom: -2.3rem;
 }
 
 .numero {
@@ -141,13 +201,11 @@ body {
 
 /*customClass para swal.fire----------------*/
 
-
 .mi-titulo {
   color: rgb(13, 240, 13);
   font-size: 2rem;
   font-weight: bold;
 }
-
 
 .mi-popup {
   background-color: black;
@@ -217,7 +275,7 @@ body {
     align-items: center;
 
     width: 100%;
-    height: 30%;
+    height: 25%;
   }
   .divEntrada {
     display: flex;
@@ -225,7 +283,16 @@ body {
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    height: 45%;
+    height: 60%;
+  }
+
+  .contadoresEntrada {
+    display: flex;
+    /* border: solid 5px rgb(11, 125, 218); */
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 
   .containerInput {
@@ -237,6 +304,42 @@ body {
   .entrada {
     width: 6rem;
     height: 6rem;
+  }
+
+  .containerInputNumero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 
+    border: solid 1px red; */
+    margin-inline: 0rem;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+  }
+  .containerNumeroSecreto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: solid 3px rgb(13, 240, 13);
+    font-size: 2rem;
+    background-color: black;
+    position: absolute;
+    bottom: -2rem;
+  }
+
+  .imagenNumeroSecreto {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .imgDivNumeroSecreto {
+    width: 2.5rem;
+    height: auto;
   }
 
   .mi-titulo {
@@ -288,6 +391,8 @@ body {
 @media (max-width: 500px) {
   body {
     justify-content: center;
+    display: flex;
+    justify-content: space-around;
     padding-inline: 1rem;
     padding-block: 2rem;
   }
@@ -297,10 +402,11 @@ body {
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    height: 33%;
+    height: 20%;
     color: rgb(13, 240, 13);
     padding-bottom: 0.5rem;
-    margin-top: 1.5rem;
+
+    /* border: solid 1px red; */
   }
   .titulo {
     font-size: 1.3rem;
@@ -317,31 +423,47 @@ body {
     font-size: 1.2rem;
   }
 
-  .containerGanadosPerdidos {
+  .containerGanados {
+    width: 5.5rem;
+  }
+  .containerPerdidos {
     width: 5.5rem;
   }
 
   .salida {
     font-size: 1rem;
     margin-top: 2rem;
-    /* border: solid 1px red; */
+    width: 100%;
+    height: 4rem;
+    /* border: solid 1px red;  */
+  }
+  .divEntrada {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 1px rgb(27, 224, 250); */
+    justify-content: center;
+    align-items: space-around;
+    width: 100%;
+    height: 40%;
   }
   .divSalida {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     width: 100%;
-    height: 33%;
+    height: 30%;
+    /* border: solid 1px rgb(32, 13, 201); */
   }
-  .divEntrada {
+
+  .contadoresEntrada {
     display: flex;
 
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    height: 34%;
+
+    justify-content: space-around;
+    align-items: center;
   }
 
   .containerInput {
@@ -355,6 +477,29 @@ body {
     height: 6rem;
   }
 
+  .containerNumeroSecreto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: solid 3px rgb(13, 240, 13);
+    font-size: 2rem;
+    background-color: black;
+    position: absolute;
+    bottom: -2rem;
+  }
+
+  .imgDivNumeroSecreto {
+    width: 2.5rem;
+    height: auto;
+  }
+
+  .imagenNumeroSecreto {
+    width: 2.5rem;
+    height: auto;
+  }
 
   .mi-titulo {
     color: rgb(13, 240, 13);
